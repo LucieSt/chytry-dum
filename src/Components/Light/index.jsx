@@ -6,9 +6,7 @@ import lightOffImg from './images/light-off.svg';
 const Light = ({ oneLight }) => {
 
     const { name, state } = oneLight;
-    
     const [ stateOfLight, setStateOfLight ] = useState(state);
-    console.log(stateOfLight);
 
     const handleClick = () => stateOfLight === "on" ? setStateOfLight("off") : setStateOfLight("on");
 

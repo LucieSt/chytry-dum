@@ -7,17 +7,16 @@ import './style.css';
 
 const Dashboard = ({ data }) => {
 
-    const {lights, climate, blinds, energyConsumption} = data;
+	const { lights, climate, blinds, energyConsumption } = data;
 
-
-    return (
-        <main className="dashboard">
-            <Lights lightsData={lights}/>
-            <Climate climateData={climate}/>
-            <Blinds blindsData={blinds}/>
-            <Energy energyData={energyConsumption}/>
-        </main>
-    )
+	return (
+		<main className="dashboard">
+			<Lights lights={lights} />
+			<Climate temperature={climate.temperature} humidity={climate.humidity} />
+			<Blinds blinds={blinds} />
+			<Energy electricity={energyConsumption.electricity} water={energyConsumption.water} />
+		</main>
+	)
 };
 
 export default Dashboard;
